@@ -1,0 +1,1083 @@
+@import "vars"
+
+*
+  box-sizing: border-box
+
+html, body
+  font-family: 'Roboto', Arial, sans-serif
+  font-weight: 300
+  font-size: 14px
+  color: $main-text-color
+
+body
+  overflow-x: hidden
+
+body, ul, ol
+  margin: 0
+  padding: 0
+
+ul, ol
+  list-style: none
+
+input, textarea
+  outline: none
+  &:active
+    outline: none
+  &:focus
+    outline: none
+
+a
+  transition: all .2s ease-in
+  &:link, &:active, &:visited
+    text-decoration: none
+
+img
+  max-width: 100%
+  height: auto
+  display: inline-block
+
+h2[class$="__title__main"]
+  text-align: center
+  font-size: 36px
+  line-height: 38px
+  padding-bottom: 20px
+  font-weight: 300
+
+div[class$="__row-1"]
+  padding: 50px 0 30px
+
+.title__line
+  width: 35%
+  height: 1px
+  background: $accent
+  margin: 0 auto
+  z-index: 2
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  @media only screen and(max-width: 575px)
+    max-width: 530px
+  @media only screen and(max-width: 767px)
+    max-width: 730px
+  @media only screen and(max-width: 991px)
+    max-width: 960px
+  @media only screen and(max-width: 1199px)
+    max-width: 1160px
+
+.hidden
+  display: none
+
+.invisible
+  opacity: 0
+
+.clearfix::after
+  content: ""
+  display: table
+  clear: both
+
+.button
+  color: white
+  background: $accent
+  font-weight: 400
+  border: none
+  outline: none
+  cursor: pointer
+  transition: all .3s ease-in-out
+  &:active, &:focus
+    border: none
+    outline: none
+  &:hover
+    background: #999
+
+.header
+  background: url("../img/main-bg.jpg") no-repeat center center / cover
+  color: white
+  &__logo
+    img
+      @media only screen and(max-width: 538px)
+        height: 40px
+      @media only screen and(max-width: 395px)
+        height: 30px
+  &__line
+    &-1
+      padding: 30px 0
+      @media only screen and(max-width: 538px)
+        padding: $padding 0
+  &__contacts
+    display: grid
+    grid-template-columns: 1fr 2fr
+    @media only screen and(max-width: 538px)
+      display: block
+      height: 40px
+    @media only screen and(max-width: 395px)
+      height: 30px
+    &__img
+      text-align: right
+      padding: 5px 10px 0 0
+      @media only screen and(max-width: 538px)
+        display: none
+    &__questions
+      font-size: 12px
+      line-height: 24px
+      @media only screen and(max-width: 1133px)
+        font-size: 10px
+      @media only screen and(max-width: 538px)
+        display: none
+    &__phone
+      font-weight: 500
+      font-size: 21px
+      line-height: 24px
+      text-transform: uppercase
+      color: white
+      display: block
+      @media only screen and(max-width: 538px)
+        height: 40px
+        line-height: 45px
+      @media only screen and(max-width: 395px)
+        height: 30px
+        line-height: 33px
+      &:hover
+        color: #ccc
+      @media only screen and(max-width: 1133px)
+        font-size: 18px
+      @media only screen and(max-width: 595px)
+        font-size: 16px
+      @media only screen and(max-width: 386px)
+        font-size: 14px
+      @media only screen and(max-width: 348px)
+        font-size: 12px
+  &__nav
+    position: relative
+    @media only screen and(max-width: 496px)
+      width: 70px
+    &__burger
+      width: 70px
+      padding-right: $padding
+      margin-left: auto
+      cursor: pointer
+      padding-top: 5px
+      &:hover
+        color: #ccc
+        >div
+          background: #ccc
+      &__line
+        width: 70%
+        height: 3px
+        background: white
+        margin-bottom: 6px
+        margin-left: auto
+      &__text
+        font-weight: 500
+        font-size: 12px
+        line-height: 14px
+        text-transform: uppercase
+        text-align: right
+        padding-right: 1px
+    &__menu
+      position: absolute
+      top: 60px
+      right: 15px
+      width: 180px
+      padding: 15px
+      border: 1px solid white
+      text-align: center
+      z-index: 2
+      @media only screen and(max-width: 1133px)
+        display: none
+        background: green
+        border: none
+      &__item
+        padding: 5px 0
+      &__link
+        color: white
+        text-transform: uppercase
+        border-bottom: 1px solid transparent
+        &:hover
+          color: #f33
+          border-bottom: 1px solid #f66
+  &__title
+    padding: 50px 15px 25px
+    text-align: center
+    @media only screen and(max-width: 538px)
+      padding: 20px 10px 15px
+    &__main
+      font-weight: 700
+      font-size: 48px
+      @media only screen and(max-width: 719px)
+        font-size: 36px
+      @media only screen and(max-width: 563px)
+        font-size: 26px
+        font-weight: 500
+      @media only screen and(max-width: 413px)
+        font-size: 22px
+      @media only screen and(max-width: 330px)
+        font-size: 20px
+    &__desc
+      font-weight: 500
+      font-size: 36px
+      line-height: 40px
+      text-transform: lowercase
+      @media only screen and(max-width: 719px)
+        font-size: 25px
+        line-height: 33px
+      @media only screen and(max-width: 563px)
+        font-size: 20px
+        line-height: 28px
+      @media only screen and(max-width: 413px)
+        font-size: 16px
+        line-height: 22px
+    &__app
+      padding-top: 10px
+      font-size: 22px
+      line-height: 28px
+      @media only screen and(max-width: 763px)
+        font-size: 16px
+        line-height: 22px
+      @media only screen and(max-width: 563px)
+        margin: 0
+        padding: 0
+        font-size: 14px
+        line-height: 18px
+      @media only screen and(max-width: 413px)
+        font-size: 10px
+        line-height: 15px
+  &__application
+    text-align: center
+    position: relative
+    &__circuit
+      height: 320px
+      width: 100%
+      position: absolute
+      top: 23px
+      left: -5px
+      @media only screen and(max-width: 873px)
+        padding: 0 20px
+      @media only screen and(max-width: 832px)
+        padding-left: 30px
+      @media only screen and(max-width: 746px)
+        padding-left: 25px
+      @media only screen and(max-width: 700px)
+        padding: 0 0 0 5px
+    &__canvas
+      display: block
+      margin: 0 auto
+      @media only screen and(max-width: 832px)
+        margin-top: -8px
+      @media only screen and(max-width: 660px)
+        width: 85%
+        height: 47%
+    &__desc
+      line-height: 28px
+      @media only screen and(max-width: 440px)
+        line-height: 22px
+        font-size: 10px
+      @media only screen and(max-width: 323px)
+        font-size: 9px
+    &__mouse
+      margin: 75px 0 55px
+      @media only screen and(max-width: 660px)
+        margin: 20px 0 20px
+  &__form
+    &__input
+      width: 290px
+      height: 50px
+      margin-right: 10px
+      padding-left: 28px
+      font-size: 20px
+      border-radius: $border-radius
+      border: 1px solid transparent
+      &::placeholder
+        font-size: 16px
+        @media only screen and(max-width: 1125px)
+          font-size: 14px
+        @media only screen and(max-width: 832px)
+          font-size: 13px
+      &-last
+        margin-right: 0
+      &:focus
+        border: 1px solid $accent
+      @media only screen and(max-width: 1125px)
+        width: 250px
+        height: 45px
+        font-size: 18px
+      @media only screen and(max-width: 832px)
+        font-size: 16px
+        height: 35px
+        width: 200px
+      @media only screen and(max-width: 660px)
+        display: block
+        margin: 0 auto 10px
+        width: 80%
+    &__button
+      width: 230px
+      height: 60px
+      font-weight: 500
+      font-size: 16px
+      display: block
+      margin: 20px auto
+      line-height: 20px
+      border-radius: $border-radius
+      @media only screen and(max-width: 832px)
+        height: 40px
+        width: 200px
+      @media only screen and(max-width: 660px)
+        width: 70%
+
+.services
+  &__wrap
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr 1fr 1fr
+    grid-gap: 20px 30px
+    grid-template-areas: "i2 i1" "i3 i4" "i6 i5"
+    padding: 10px 0 75px
+    @media only screen and(max-width: 872px)
+      display: block
+      text-align: center
+    @media only screen and(max-width: 767px)
+      padding-bottom: 10px
+  &-grid
+    &-1
+      grid-area: i1
+    &-2
+      grid-area: i2
+    &-3
+      grid-area: i3
+    &-4
+      grid-area: i4
+    &-5
+      grid-area: i5
+    &-6
+      grid-area: i6
+  &__desc
+    padding-top: 15%
+    cursor: pointer
+    @media only screen and(max-width: 872px)
+      padding-top: 30px
+    &:hover
+      >div>button
+        opacity: 1
+    &__title
+      font-weight: 100
+      font-size: 28px
+      color: $accent
+      @media only screen and(max-width: 425px)
+        font-size: 22px
+    &__content
+      font-weight: 300
+      font-size: 18px
+      line-height: 28px
+      overflow-wrap: break-word
+      word-wrap: break-word
+      -webkit-hyphens: auto
+      -ms-hyphens: auto
+      hyphens: auto
+      @media only screen and(max-width: 425px)
+        font-size: 14px
+        line-height: 22px
+    &__button
+      width: 180px
+      height: 50px
+      border-radius: $border-radius
+      margin-top: 15px
+      opacity: 0
+    @media only screen and(max-width: 872px)
+      margin-bottom: 30px
+
+.calculation
+  background: url("../img/calculate-bg.jpg") no-repeat center center / cover
+  color: white
+  &__title
+    &__line
+      border: 1px solid white
+    &__desc
+      font-size: 26px
+      line-height: 38px
+      font-weight: 100
+      text-align: center
+      padding: 25px 0 0 0
+      @media only screen and(max-width: 432px)
+        font-size: 18px
+        line-height: 26px
+  &__data
+    padding-right: $padding
+  &__form
+    &__block
+      border: 1px solid white
+      border-radius: 5px
+      margin-bottom: 8px
+      padding: 20px
+      &-2
+        position: relative
+      &__title
+        font-weight: 400
+        font-size: 20px
+        line-height: 24px
+    &__values
+      display: flex
+      justify-content: space-between
+      padding-top: 15px
+      &__item
+        &:nth-child(2), &:nth-child(3)
+          padding-left: 8%
+      &__text
+        font-size: 16px
+        line-height: 24px
+        font-weight: 100
+        @media only screen and(max-width: 490px)
+          font-size: 10px
+          line-height: 16px
+    &__range
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      &__item
+        position: relative
+        &__hidden
+          position: absolute
+          top: -9px
+          width: 28px
+          height: 28px
+          z-index: 3
+          &-1, &-2
+            left: -13px
+          &-3, &-4
+          right: -15px
+          &-trick
+            height: 24px
+            width: 24px
+            border-radius: 50%
+            background: radial-gradient(white 0px, white 3px, #0cf 4px)
+    &__radio
+      position: absolute
+      left: 0
+      bottom: 0
+      display: none
+      &:checked + label
+        border: 1px solid transparent
+        background: $accent
+    &__button
+      width: 200px
+      height: 45px
+      border: 1px solid white
+      border-radius: 5px
+      margin: 15px 10px 5px 0
+      font-weight: 400
+      font-size: 16px
+      line-height: 45px
+      text-align: center
+      &:last-child
+        margin-right: 0
+        @media only screen and(max-width: 1198px)
+          margin: 15px auto 5px
+      @media only screen and(max-width: 1198px)
+        display: block
+        width: 80%
+        margin: 15px auto 5px
+  &__result
+    text-align: center
+    @media only screen and(max-width: 767px)
+      padding-top: 30px
+    &__header
+      display: block
+      font-weight: 400
+      font-size: 16px
+      line-height: 24px
+    &__input
+      font-size: 32px
+      text-align: center
+      width: 80%
+      height: 50px
+      background: transparent
+      color: white
+      border: 1px solid transparent
+    &__button
+      height: 50px
+      width: 310px
+      border-radius: $border-radius
+      display: block
+      margin: 15px auto 20px
+      @media only screen and(max-width: 360px)
+        width: 80%
+        height: 40px
+        font-size: 10px
+    &__call
+      text-align: center
+      font-size: 14px
+      line-height: 24px
+      margin: 0
+    &__contacts
+      text-align: center
+      line-height: 24px
+      padding-bottom: 65px
+    &__phone
+      font-weight: 500
+      font-size: 18px
+      color: white
+      line-height: 24px
+      &:hover
+        color: #ccc
+
+//======================Tooltip CSS Options=====================================
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before
+    border: none
+    height: 20px
+    width: 40px
+    background: url("../img/arrow-down.png") no-repeat center top
+    left: -15px
+    top: -1px
+.bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^="right"] .arrow::before
+
+    border: none
+    height: 40px
+    width: 20px
+    background: url("../img/arrow-left.png") no-repeat right center
+    right: -1px
+.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before
+
+    border: none
+    height: 20px
+    width: 40px
+    background: url("../img/arrow-up.png") no-repeat center bottom
+    left: -15px
+    bottom: -1px
+.bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before
+    border: none
+    height: 40px
+    width: 20px
+    background: url("../img/arrow-down.png") no-repeat left center
+    left: -1px
+.tooltip-inner
+    max-width: 450px
+    color: #333
+    background-color: #fff
+    border-radius: 5px
+    z-index: 3
+
+.calculation__form__button-tooltip
+  margin: 20px
+  font-weight: 400
+  font-size: 14px
+  line-height: 24px
+  z-index: 5
+//====================Tooltip CSS Options END===================================
+
+.portfolio
+  &__tabs
+    padding-bottom: 50px
+    @media only screen and(max-width: 767px)
+      padding-bottom: 0
+    &__controls
+      position: relative
+      display: flex
+      justify-content: center
+      padding: 5px 0 20px
+    &__radio
+      position: absolute
+      left: 0
+      bottom: 0
+      display: none
+      &:checked+label
+        transform: scale(1.1)
+        border: none
+        background: $accent
+        color: white
+        font-weight: 400
+        border-radius: 10px
+    &__label
+      text-align: center
+      width: 18%
+      height: 47px
+      border-top: 1px solid $accent
+      border-bottom: 1px solid $accent
+      color: $accent
+      line-height: 47px
+      text-transform: uppercase
+      transition: all .3s ease-in-out
+      @media only screen and(max-width: 960px)
+        font-size: 10px
+        height: 35px
+        line-height: 35px
+      @media only screen and(max-width: 727px)
+        width: 23%
+      @media only screen and(max-width: 559px)
+        text-transform: none
+      @media only screen and(max-width: 480px)
+        font-size: 8px
+      @media only screen and(max-width: 416px)
+        font-size: 6px
+      &-first
+        border-left: 1px solid $accent
+        border-radius: $border-radius 0 0 $border-radius
+      &-last
+        width: 27%
+        border-right: 1px solid $accent
+        border-radius: 0 $border-radius $border-radius 0
+        @media only screen and(max-width: 727px)
+          width: 30%
+    &__line
+      height: 37px
+      margin-top: 5px
+      width: 1px
+      background: $accent
+      @media only screen and(max-width: 960px)
+        height: 25px
+    &__content
+      position: relative
+      &__wrap
+        position: absolute
+        top: 0
+        left: 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-gap: 30px 30px
+        opacity: 0
+        animation: fadeIn 1s ease-in-out
+        animation-fill-mode: both
+        &:nth-child(2)
+          opacity: 1
+        @media only screen and(max-width: 487px)
+          grid-template-columns: 1fr 1fr
+          grid-gap: 10px 10px
+        &-hidden
+          display: grid
+          grid-template-columns: 1fr 1fr 1fr
+          grid-gap: 30px 30px
+          opacity: 0
+          @media only screen and(max-width: 487px)
+            grid-template-columns: 1fr 1fr
+            grid-gap: 10px 10px
+
+.preferences
+  text-align: center
+  &__row
+    &-2
+      padding-bottom: 50px
+  &__item
+    @media only screen and(max-width: 767px)
+      padding-top: 30px
+  &__line
+    width: 40%
+    height: 1px
+    background: $accent
+    margin: 20px auto
+    z-index: 2
+  &__desc
+    padding: 0 5px
+    font-weight: 500
+    line-height: 20px
+
+.process
+  text-align: center
+  &__title
+    padding-bottom: 10px
+    &__main
+      @media only screen and(max-width: 395px)
+        font-size: 28px
+        line-height: 32px
+  &__row
+    &-2
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: "a1 a2" "a4 a3" "a5 a6" "a8 a7"
+      @media only screen and(max-width: 628px)
+        display: block
+        text-align: center
+  &__grid
+    &-1
+      grid-area: a1
+    &-2
+      grid-area: a2
+    &-3
+      grid-area: a3
+    &-4
+      grid-area: a4
+    &-5
+      grid-area: a5
+    &-6
+      grid-area: a6
+    &-7
+      grid-area: a7
+    &-8
+      grid-area: a8
+  &__step
+    font-size: 30px
+    line-height: 38px
+    margin-top: 15%
+    @media only screen and(max-width: 628px)
+      margin: 15px 0 70px
+    @media only screen and(max-width: 395px)
+      font-size: 24px
+      line-height: 30px
+
+.brands
+  &__title
+    padding: 70px 0 50px
+    @media only screen and(max-width: 588px)
+      padding: 30px 0
+    &__main
+      @media only screen and(max-width: 476px)
+        font-size: 28px !important
+        line-height: 36px !important
+        font-weight: 700 !important
+  &__wrap
+    overflow-x: auto
+    white-space: nowrap
+    outline: none
+    width: 1200px
+    margin: 0 auto
+    @media only screen and(max-width: 1199px)
+      width: 992px
+    @media only screen and(max-width: 991px)
+      width: 768px
+    @media only screen and(max-width: 767px)
+      width: 576px
+    @media only screen and(max-width: 575px)
+      width: 320px
+  &__img
+    display: inline-block
+    padding: 0 10px
+    padding-bottom: 40px
+
+.team
+  text-align: center
+  &__row
+    &-3
+      padding-top: 40px
+  &__title
+    padding: 20px 0
+    &__line
+      margin: 20px auto
+  &__desc
+    padding: 20px 0 30px
+    &__name
+      font-weight: 400
+      color: $accent
+      font-size: 24px
+      line-height: 27px
+    &__position
+      font-size: 19px
+      line-height: 27px
+  &__mission
+    position: relative
+    &__quotes
+      position: absolute
+      @media only screen and(max-width: 692px)
+        width: 35px
+      @media only screen and(max-width: 497px)
+        display: none
+      &-left
+        top: 0
+        left: 0
+      &-right
+        bottom: 0
+        right: 0
+    &__idea
+      padding: 10px 0
+      font-weight: 300
+      font-size: 30px
+      @media only screen and(max-width: 692px)
+        font-size: 20px
+        font-weight: 700
+      @media only screen and(max-width: 367px)
+        margin-bottom: 0
+    &__text
+      font-size: 18px
+      line-height: 32px
+      padding: 0 85px
+      @media only screen and(max-width: 692px)
+        font-size: 14px
+        line-height: 22px
+      @media only screen and(max-width: 497px)
+        padding: 0 15px
+      @media only screen and(max-width: 367px)
+        margin-bottom: 5px
+    &__leader
+      font-weight: 500
+      font-size: 18px
+      line-height: 26px
+      @media only screen and(max-width: 692px)
+        font-size: 14px
+        line-height: 22px
+      @media only screen and(max-width: 367px)
+        margin-bottom: 0
+    &__position
+      font-weight: 300
+      font-size: 16px
+      line-height: 26px
+      font-size: 12px
+      line-height: 16px
+
+.blog
+  &__title
+    padding-top: 100px
+    @media only screen and(max-width: 800px)
+      padding-top: 30px
+  &__row
+    &-2
+      display: flex
+      justify-content: space-between
+      padding-bottom: 75px
+      @media only screen and(max-width: 1199px)
+        display: block
+        text-align: center
+  &__desc
+    &__text
+      text-align: center
+      padding-top: 25px
+      cursor: pointer
+      @media only screen and(max-width: 1199px)
+        padding-bottom: 50px
+    &__link
+      font-size: 18px
+      line-height: 24px
+      color: $accent
+      border-bottom: 1px solid transparent
+      &:hover
+        color: $accent
+        border-bottom: 1px solid $accent
+
+.questions
+  background: url("../img/question-bg.jpg") no-repeat center center / cover
+  color: white
+  &__title
+    &__line
+      background: white
+    &__add
+      text-align: center
+      padding-top: 20px
+      font-weight: 300
+      font-size: 26px
+      line-height: 38px
+      @media only screen and(max-width: 856px)
+        font-size: 20px
+        line-height: 28px
+  &__form
+    text-align: center
+    padding: 0 $padding 65px 0
+    @media only screen and(max-width: 466px)
+      padding-bottom: 40px
+    &__inputwrapper
+      display: flex
+      justify-content: space-between
+      @media only screen and(max-width: 466px)
+        display: block
+    &__input
+      width: 32%
+      height: 50px
+      border-radius: 7px
+      border: 1px solid transparent
+      padding-left: 20px
+      &:last-child
+        margin-right: 0
+        @media only screen and(max-width: 466px)
+          margin: 0 auto
+      &:focus
+        outline: none
+        border: 1px solid $accent
+      @media only screen and(max-width: 1150px)
+        height: 40px
+      @media only screen and(max-width: 955px)
+        height: 30px
+        font-size: 12px
+        &::placeholder
+          font-size: 10px
+      @media only screen and(max-width: 466px)
+        display: block
+        width: 80%
+        margin: 0 auto
+        margin-bottom: 10px
+    &__textarea
+      padding: 15px 20px
+      display: block
+      margin: 0 auto
+      border-radius: 7px
+      resize: none
+      width: 100%
+      height: 125px
+      margin: 15px 0
+      &:focus
+        outline: none
+        border: 1px solid $accent
+      @media only screen and(max-width: 955px)
+        font-size: 12px
+        &::placeholder
+          font-size: 10px
+      @media only screen and(max-width: 466px)
+        width: 80%
+        display: block
+        margin: 10px auto
+    &__button
+      width: 215px
+      height: 50px
+      border-radius: $border-radius
+      font-weight: 500
+      font-size: 15px
+      @media only screen and(max-width: 767px)
+        height: 40px
+      @media only screen and(max-width: 466px)
+        width: 60%
+  &__contacts
+    padding-left: $padding
+    display: grid
+    grid-template-columns: 45px 1fr
+    grid-template-rows: repeat(5, 43px)
+    @media only screen and(max-width: 767px)
+      grid-template-columns: 45px 1fr 45px 1fr 45px 1fr
+    @media only screen and(max-width: 655px)
+      grid-template-columns: 45px 1fr 45px 1fr
+    @media only screen and(max-width: 466px)
+      grid-template-columns: 25px 1fr 25px 1fr
+      grid-template-rows: repeat(3, 30px)
+    &__icon
+      width: 27px
+      height: 27px
+      border: 1px solid white
+      text-align: center
+      padding-top: 2px
+      border-radius: 4px
+      @media only screen and(max-width: 466px)
+        width: 20px
+        height: 20px
+        padding-top: 0
+    &__svg
+      fill: white
+      @media only screen and(max-width: 466px)
+        width: 10px
+        height: 10px
+        margin-top: -4px
+    &__data
+      font-size: 18px
+      line-height: 24px
+      font-weight: 500
+      color: white
+      border-bottom: 2px solid transparent
+      @media only screen and(max-width: 466px)
+        font-size: 12px
+        line-height: 16px
+      &:hover
+        color: white
+        border-bottom: 1px solid white
+    &__shedule
+      grid-column: span 2
+      padding-top: 10px
+      font-size: 16px
+      line-height: 24px
+      @media only screen and(max-width: 792px)
+        font-size: 15px
+        line-height: 22px
+      @media only screen and(max-width: 767px)
+        grid-column: span 4
+      @media only screen and(max-width: 466px)
+        font-size: 12px
+        line-height: 18px
+
+.map
+  &__wrap
+    position: relative
+  &__overlay
+    position: absolute
+    width: 100%
+    height: 600px
+    top: 0
+    left: 0
+    background: rgba(0, 0, 0, .3)
+    z-index: 2
+
+.footer
+  color: white
+  background: #333
+  font-size: 14px
+  font-weight: 300
+  line-height: 24px
+  @media only screen and(max-width: 833px)
+    font-size: 12px
+    line-height: 18px
+  @media only screen and(max-width: 399px)
+    font-size: 10px
+    line-height: 15px
+  &__row
+    padding-top: 0 !important
+    &-2
+      border-top: 1px solid #663
+  &__navigation
+    padding-top: 30px
+    @media only screen and(max-width: 767px)
+      padding-top: 15px
+  &__link
+    color: white
+    display: block
+    &:hover
+      color: #ccc
+      text-decoration: underline
+    &-2
+      text-align: center
+      @media only screen and(max-width: 767px)
+        text-align: right
+    &-3
+      padding-left: 35px
+      @media only screen and(max-width: 767px)
+        padding-left: 0
+  &__social
+    padding-top: 30px
+    @media only screen and(max-width: 767px)
+      padding-top: 15px
+    &__text
+      text-align: right
+      margin-bottom: 3px
+    &__icons
+      width: 175px
+      margin-left: auto
+      display: flex
+      justify-content: flex-end
+      padding-right: 52px
+      @media only screen and(max-width: 833px)
+        padding-right: 32px
+      @media only screen and(max-width: 767px)
+        padding-right: 0
+        width: 100%
+      &__item
+        height: 30px
+        width: 30px
+        border: 1px solid white
+        border-radius: 5px
+        margin-left: 7px
+        text-align: center
+        padding-top: 2px
+        @media only screen and(max-width: 833px)
+          padding-top: 3px
+        @media only screen and(max-width: 767px)
+          display: inline-block
+        @media only screen and(max-width: 399px)
+          height: 20px
+          width: 20px
+          padding-top: 1px
+        svg
+          fill: white
+          @media only screen and(max-width: 399px)
+            width: 12px
+            height: 12px
+  &__copyright
+    padding-top: 30px
+    @media only screen and(max-width: 767px)
+      padding-top: 15px
+    @media only screen and(max-width: 575px)
+      text-align: center
+    &__text
+      padding-bottom: 15px
+      @media only screen and(max-width: 767px)
+        padding-bottom: 5px
+      @media only screen and(max-width: 575px)
+        padding-bottom: 0
+        font-size: 8px
+  &__creator
+    padding-top: 20px
+    @media only screen and(max-width: 767px)
+     padding-top: 5px
+    @media only screen and(max-width: 575px)
+      display: none
+    &__wrap
+      width: 250px
+      margin-left: auto
+    &__text
+      display: inline-block

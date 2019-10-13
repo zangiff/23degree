@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>23Degree - студия 3D-дизайна</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/07659b6a35.js" crossorigin="anonymous"></script> <!-- FontAwesome JS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!-- Bootstrap functionality-->
+  <link rel="stylesheet" href="./libs/jquery.jscrollpane.css"> <!--jScrollPane Plugin for custom scroll-->
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+  <div id="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="row header__line header__line-1">
+          <div class="col-lg-8 col-md-5 col-4 header__logo"><a href="#"><img src="img/logo.png" alt="logo"></a></div>
+          <div class="col-lg-3 col-md-5 col-5 header__contacts">
+            <div class="header__contacts__img">
+              <img src="img/phone-icon.png" alt="phone">
+            </div>
+            <div class="header__contacts__content">
+                <span class="header__contacts__questions">Есть вопросы? Звоните!</span>
+                <a href="tel:+78002590936" class="header__contacts__phone">8 /800/ 259 09 36</a>
+            </div>
+          </div>
+          <div class="col-lg-1 col-md-2 col-3 header__nav">
+            <div class="header__nav__burger">
+              <div class="header__nav__burger__line"></div>
+              <div class="header__nav__burger__line"></div>
+              <div class="header__nav__burger__line"></div>
+              <p class="header__nav__burger__text">Меню</p>
+            </div>
+            <div class="header__nav__menu">
+              <ul class="header__nav__menu__list">
+                <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__link">Портфолио</a></li>
+                <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__link">Услуги</a></li>
+                <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__link">3D-дизайн</a></li>
+                <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__link">Расчет стоимости</a></li>
+                <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__link">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row header__line header__line-2">
+          <div class="col-12 header__title">
+            <h1 class="header__title__main">Услуги по 3D моделированию<p class="header__title__desc">Полный спектр услуг</p></h1>
+            <p class="header__title__app">Оставьте заявку сейчас и получите дизайн интерьера 25 м<sup>2</sup> бесплатно!*</p>
+          </div>
+        </div>
+        <div class="row header__line header__line-3">
+          <div class="col-lg-10 offset-lg-1 header__application">
+            <div class="header__application__circuit">
+              <canvas id="header-canvas" class="header__application__canvas"></canvas>
+            </div>
+            <form action="/" class="header__form" name="header-form" id="header-form" method="POST">
+              <input type="text" class="header__form__input" value="" name="header-form-name" id="header-form-name" form="header-form" placeholder="Ваше имя" maxlength="32" pattern="^[a-zA-ZА-Яа-яЁё\s\'-]+$" required>
+              <input type="email" class="header__form__input" value="" name="header-form-email" id="header-form-email" form="header-form" placeholder="E-mail" maxlength="32" pattern="^[.a-zA-Zа-яА-Я0-9_-]+@[а-яА-Яa-z0-9-.]+\.[а-яА-Яa-zA-Z]{2,6}$" required>
+              <input type="tel" class="header__form__input header__form__input-last" value="" name="header-form-tel" id="header-form-tel" form="header-form" placeholder="Номер телефона" maxlength="14" pattern="\+{0,1}[7|8]\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
+              <button class="button header__form__button" form="header-form" type="submit">Оставить заявку!</button>
+            </form>
+            <p class="header__application__desc">*Мы гарантируем конфиденциальность передаваемых данных</p>
+            <a href="#"><img class="header__application__mouse" src="img/mouse-icon.png" alt="mouse"></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <section class="services">
+        <div class="container">
+          <div class="row services__row services__row-1">
+            <div class="col-12 services__title">
+              <h2 class="services__title__main">Наши услуги</h2>
+              <div class="title__line services__title__line"></div>
+            </div>
+          </div>
+          <div class="services__wrap">
+            <div class="services__img services-grid-1"><img src="img/services-1.jpg" alt="fireplace"></div>
+            <div class="services__desc services-grid-2">
+              <div class="services__desc__wrap">
+                <h3 class="services__desc__title">Дизайн интерьера</h3>
+                <p class="services__desc__content">Услуга, направленная на разработку интерьеров помещений с целью обеспечить удобство и эстетически приятное ощущение у человека при нахождении в помещении</p>
+                <button type="button" class="button services__desc__button">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="services__img services-grid-3"><img src="img/services-2.jpg" alt="building"></div>
+            <div class="services__desc services-grid-4">
+              <div class="services__desc__wrap">
+                <h3 class="services__desc__title">Дизайн экстерьера</h3>
+                <p class="services__desc__content">Услуга, направленная на разработку дизайна прилегающих элементов зданий, а также дизайн самих зданий, позволяющая обеспечить удобство людей при нахождении на территории</p>
+                <button type="button" class="button services__desc__button">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="services__img services-grid-5"><img src="img/services-3.jpg" alt="landscape"></div>
+            <div class="services__desc services-grid-6">
+              <div class="services__desc__wrap">
+                <h3 class="services__desc__title">Визуализация</h3>
+                <p class="services__desc__content">Услуга, направленная на разработку дизайна прилегающих элементов зданий, а также дизайн самих зданий, позволяющая обеспечить удобство людей при нахождении на территории</p>
+                <button type="button" class="button services__desc__button">Оставить заявку</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="calculation">
+        <div class="container">
+          <div class="row calculation__row calculation__row-1">
+            <div class="col-12 calculation__title">
+              <h2 class="calculation__title__main">Рассчитать стоимость</h2>
+              <div class="title__line calculation__title__line"></div>
+              <p class="calculation__title__desc">Рассчитайте предварительную стоимость разработки интерьера</p>
+            </div>
+          </div>
+          <div class="row calculation__row calculation__row-2">
+            <div class="col-md-7 calculation__data">
+              <form action="/" class="calculation__form" id="calculation-form" name="calculation-form" method="POST">
+                <fieldset class="calculation__form__block calculation__form__block-1">
+                  <h4 class="calculation__form__block__title">Площадь помещения:</h4>
+                  <div class="calculation__form__values">
+                    <div class="calculation__form__values__item">
+                      <p class="calculation__form__values__text">100 м<sup>2</sup></p>
+                    </div>
+                    <div class="calculation__form__values__item">
+                      <p class="calculation__form__values__text">10 000 м<sup>2</sup></p>
+                    </div>
+                    <div class="calculation__form__values__item">
+                      <p class="calculation__form__values__text">250 000 м<sup>2</sup></p>
+                    </div>
+                    <div class="calculation__form__values__item">
+                      <p class="calculation__form__values__text">500 000 м<sup>2</sup></p>
+                    </div>
+                  </div>
+                  <div class="calculation__form__range">
+                    <div class="calculation__form__range__item" id="calculation-range-1">
+                      <div class="calculation__form__range__item__hidden calculation__form__range__item__hidden-1"></div>
+                    </div>
+                    <div class="calculation__form__range__item" id="calculation-range-2">
+                      <div class="calculation__form__range__item__hidden calculation__form__range__item__hidden-2">
+                        <div class="calculation__form__range__item__hidden-trick"></div>
+                      </div>
+                      <div class="calculation__form__range__item__hidden calculation__form__range__item__hidden-3"></div>
+                    </div>
+                    <div class="calculation__form__range__item" id="calculation-range-3">
+                      <div class="calculation__form__range__item__hidden calculation__form__range__item__hidden-4"></div>
+                    </div>
+                  </div>
+                  <!-- <input type="range" class="calculation__form__range" id="calculation-form-range-1" min="100" max="10000" value="100" step="100">
+                  <input type="range" class="calculation__form__range" id="calculation-form-range-2" min="10000" max="250000" value="10000" step="1000" checked>
+                  <input type="range" class="calculation__form__range" id="calculation-form-range-3" min="250000" max="500000" value="500000" step="10000"> -->
+                </fieldset>
+                <fieldset class="calculation__form__block calculation__form__block-2">
+                  <h4 class="calculation__form__block__title">Выберите пакет:</h4>
+                  <input type="radio" name="calculation-form-radio" id="calculation-form-radio-1" class="calculation__form__radio" value="light">
+                  <label for="calculation-form-radio-1" id="calculation-form-button-1" class="calculation__form__button calculation__form__button-1" title="<p class='calculation__form__button-tooltip'>План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по стенам, план электросетей)</p>" data-toggle="tooltip" data-placement="bottom">Light</label>
+                  <input type="radio" name="calculation-form-radio" id="calculation-form-radio-2" class="calculation__form__radio" value="medium" checked>
+                  <label for="calculation-form-radio-2" id="calculation-form-button-2" class="calculation__form__button calculation__form__button-2" title="<p class='calculation__form__button-tooltip'>План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по стенам, план электросетей)</p>" data-toggle="tooltip" data-placement="bottom">Medium</label>
+                  <input type="radio" name="calculation-form-radio" id="calculation-form-radio-3" class="calculation__form__radio" value="full">
+                  <label for="calculation-form-radio-3" id="calculation-form-button-3" class="calculation__form__button calculation__form__button-3" title="<p class='calculation__form__button-tooltip'>План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по стенам, план электросетей)</p>" data-toggle="tooltip" data-placement="bottom">Full</label>
+                </fieldset>
+              </form>
+            </div>
+            <div class="col-md-5 calculation__total">
+              <form action="/" class="calculation__result" name="result-form" method="POST" id="result-form">
+                <fieldset class="calculation__result__block">
+                  <label for="calculation-result-input-1" class="calculation__result__header">Площадь помещения:</label>
+                  <input type="text" class="calculation__result__input" id="calculation-result-input-1" disabled value="10 000 кв.м">
+                  <label for="calculation-result-input-2" class="calculation__result__header">Средняя стоимость 1 кв.м:</label>
+                  <input type="text" class="calculation__result__input" id="calculation-result-input-2" disabled value="4 850 тг.">
+                  <label for="calculation-result-input-3" class="calculation__result__header">Средняя стоимость объекта:</label>
+                  <input type="text" class="calculation__result__input" id="calculation-result-input-3" disabled value="48 500 тг.">
+                  <input type="hidden" class="calculation__result__input calculation__result__hidden" id="calculation-result-input-hidden" value="medium">
+                </fieldset>
+                <button class="button calculation__result__button" type="submit" form="result-form">Получить консультацию специалиста</button>
+              </form>
+              <p class="calculation__result__call">Или позвоните нам по телефону:</p>
+              <p class="calculation__result__contacts"><a href="tel:+77273887177" class="calculation__result__phone">+ 7 727 388 71 77</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="portfolio">
+        <div class="container">
+          <div class="row portfolio__row portfolio__row-1">
+            <div class="col-12 porfolio__title">
+              <h2 class="portfolio__title__main">Портфолио</h2>
+              <div class="title__line portfolio__title__line"></div>
+            </div>
+          </div>
+          <div class="row portfolio__row portfolio__row-2">
+            <div class="col-12 portfolio__wrap">
+              <div class="portfolio__tabs">
+                <div class="portfolio__tabs__controls">
+                  <input type="radio" name="portfolio-tabs" class="portfolio__tabs__radio" id="portfolio-tab-1">
+                  <label for="portfolio-tab-1" class="portfolio__tabs__label portfolio__tabs__label-first" id="portfolio-tabs-label-1">Все проекты</label>
+                  <div class="portfolio__tabs__line" id="portfolio-tabs-line-1"></div>
+                  <input type="radio" name="portfolio-tabs" class="portfolio__tabs__radio" id="portfolio-tab-2" checked>
+                  <label for="portfolio-tab-2" class="portfolio__tabs__label" id="portfolio-tabs-label-2">Экстерьеры</label>
+                  <div class="portfolio__tabs__line" id="portfolio-tabs-line-2"></div>
+                  <input type="radio" name="portfolio-tabs" class="portfolio__tabs__radio" id="portfolio-tab-3">
+                  <label for="portfolio-tab-3" class="portfolio__tabs__label" id="portfolio-tabs-label-3">Жилые интерьеры</label>
+                  <div class="portfolio__tabs__line" id="portfolio-tabs-line-3"></div>
+                  <input type="radio" name="portfolio-tabs" class="portfolio__tabs__radio" id="portfolio-tab-4">
+                  <label for="portfolio-tab-4" class="portfolio__tabs__label portfolio__tabs__label-last" id="portfolio-tabs-label-4">Общественные интерьеры</label>
+                </div>
+                <div class="portfolio__tabs__content">
+                  <div class="portfolio__tabs__content__wrap" id="portfolio-tab-content-1">
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-1.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-2.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-3.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-4.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-5.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-6.jpg" alt="house"></div>
+                  </div>
+                  <div class="portfolio__tabs__content__wrap" id="portfolio-tab-content-2">
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-5.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-6.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-3.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-4.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-1.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-2.jpg" alt="house"></div>
+                  </div>
+                  <div class="portfolio__tabs__content__wrap" id="portfolio-tab-content-3">
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-2.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-4.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-3.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-5.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-6.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-1.jpg" alt="house"></div>
+                  </div>
+                  <div class="portfolio__tabs__content__wrap" id="portfolio-tab-content-4">
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-4.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-3.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-2.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-1.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-6.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-5.jpg" alt="house"></div>
+                  </div>
+                  <div class="portfolio__tabs__content__wrap-hidden invisible">
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-2.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-4.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-3.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-5.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-6.jpg" alt="house"></div>
+                    <div class="portfolio__tabs__content__img"><img src="img/portfolio-1.jpg" alt="house"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="preferences">
+        <div class="container">
+          <div class="row preferences__row preferences__row-1">
+            <div class="col-12 preferences__title">
+              <h2 class="preferences__title__main">Почему мы лучшие?</h2>
+              <div class="title__line preferences__title__line"></div>
+            </div>
+          </div>
+          <div class="row preferences__row preferences__row-2 preferences__wrap">
+            <div class="col-md-3 col-sm-6 preferences__item">
+              <div class="preferences__img"><img src="img/preferences-1.png" alt="people"></div>
+              <div class="preferences__line"></div>
+              <div class="preferences__desc">
+                <p class="preferences__text">Профессиональные дизайнеры и визуализаторы с зарубежной практикой работы</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 preferences__item">
+              <div class="preferences__img"><img src="img/preferences-2.png" alt="nice"></div>
+              <div class="preferences__line"></div>
+              <div class="preferences__desc">
+                <p class="preferences__text">Интеративный подход, работаем до полного согласования с Вами</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 preferences__item">
+              <div class="preferences__img"><img src="img/preferences-3.png" alt="love"></div>
+              <div class="preferences__line"></div>
+              <div class="preferences__desc">
+                <p class="preferences__text">Решаем вопрос закупки, берем авторский надзор на себя (пакет Full)</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 preferences__item">
+              <div class="preferences__img"><img src="img/preferences-4.png" alt="study"></div>
+              <div class="preferences__line"></div>
+              <div class="preferences__desc">
+                <p class="preferences__text">Над проектом работает группа специалистов под началом project менеджера в ERP системе</p>
+              </div>
+            </div>
+            <div class="col-md-3 offset-md-3 col-sm-6 preferences__item">
+              <div class="preferences__img"><img src="img/preferences-5.png" alt="time"></div>
+              <div class="preferences__line"></div>
+              <div class="preferences__desc">
+                <p class="preferences__text">Выполнение раньше установленных сроков</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 preferences__item">
+              <div class="preferences__img"><img src="img/preferences-6.png" alt="diploma"></div>
+              <div class="preferences__line"></div>
+              <div class="preferences__desc">
+                <p class="preferences__text">Дарим альбом проекта, вместе с 25% скидкой на следующее обращение</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="process">
+        <div class="container">
+          <div class="row process__row process__row-1">
+            <div class="col-12 process__title">
+              <h2 class="process__title__main">Процесс взаимодействия</h2>
+              <div class="title__line process__title__line"></div>
+            </div>
+          </div>
+          <div class="process__row process__row-2">
+            <div class="process__img process__grid-1"><img src="img/process-1.jpg" alt="fill"></div>
+            <div class="process__desc process__grid-2">
+              <p class="process__step">Заполнение брифа</p>
+            </div>
+            <div class="process__img process__grid-3"><img src="img/process-2.jpg" alt="research"></div>
+            <div class="process__desc process__grid-4">
+              <p class="process__step">Исследование</p>
+            </div>
+            <div class="process__img process__grid-5"><img src="img/process-3.jpg" alt="idea"></div>
+            <div class="process__desc process__grid-6">
+              <p class="process__step">Идея</p>
+            </div>
+            <div class="process__img process__grid-7"><img src="img/process-4.jpg" alt="complete"></div>
+            <div class="process__desc process__grid-8">
+              <p class="process__step">Завершение</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="brands">
+        <div class="container">
+          <div class="brands__row brands__row-1">
+            <div class="col-12 brands__title">
+              <h2 class="brands__title__main">Нам доверяют более 50 компаний</h2>
+              <div class="title__line brands__title__line"></div>
+            </div>
+            <div class="brands__wrap">
+              <div class="brands__img"><img src="img/logo-1.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-2.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-3.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-4.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-5.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-6.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-7.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-5.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-6.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-4.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-7.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-2.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-1.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-3.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-7.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-6.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-5.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-1.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-4.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-2.png" alt="logo"></div>
+              <div class="brands__img"><img src="img/logo-3.png" alt="logo"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team">
+        <div class="container">
+          <div class="row team__row team__row-1">
+            <div class="col-12 team__title">
+              <h2 class="team__title__main">Наша команда</h2>
+              <div class="title__line team__title__line"></div>
+            </div>
+          </div>
+          <div class="row team__row team__row-2">
+            <div class="col-md-4 col-sm-6 team__item">
+              <div class="team__img"><img src="img/team-1.jpg" alt="team-member-1"></div>
+              <div class="team__desc">
+                <h3 class="team__desc__name">Ирина Притыкина</h3>
+                <p class="team__desc__position">Директор компании</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 team__item">
+              <div class="team__img"><img src="img/team-2.jpg" alt="team-member-2"></div>
+              <div class="team__desc">
+                <h3 class="team__desc__name">Игорь Карий</h3>
+                <p class="team__desc__position">Финансовый директор</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 team__item">
+              <div class="team__img"><img src="img/team-3.jpg" alt="team-member-3"></div>
+              <div class="team__desc">
+                <h3 class="team__desc__name">Илья Кондрашин</h3>
+                <p class="team__desc__position">Инженер модельер</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 team__item">
+              <div class="team__img"><img src="img/team-4.jpg" alt="team-member-4"></div>
+              <div class="team__desc">
+                <h3 class="team__desc__name">Маргарита Гордеева</h3>
+                <p class="team__desc__position">3D дизайнер</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 team__item">
+              <div class="team__img"><img src="img/team-5.jpg" alt="team-member-5"></div>
+              <div class="team__desc">
+                <h3 class="team__desc__name">Светлана Коток</h3>
+                <p class="team__desc__position">Дизайнер интерьеров</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 team__item">
+              <div class="team__img"><img src="img/team-6.jpg" alt="team-member-6"></div>
+              <div class="team__desc">
+                <h3 class="team__desc__name">Максим Ковальский</h3>
+                <p class="team__desc__position">Дизайнер ландшафтов</p>
+              </div>
+            </div>
+          </div>
+          <div class="row team__row team__row-3">
+            <div class="col-12 team__mission">
+              <div class="team__mission__quotes team__mission__quotes-left"><img src="img/quotes-left.png" alt="quotes"></div>
+              <div class="team__mission__quotes team__mission__quotes-right"><img src="img/quotes-right.png" alt="quotes"></div>
+              <h2 class="team__mission__idea">Ты - то, что ты делаешь!</h2>
+              <p class="team__mission__text">То мы делаем, определяет то, кем мы являемся. Люди чувствуют старание и чувствуют неаккуратность. Это связано с уважением друг к другу, так что небрежность - это неуважение к самому себе.</p>
+              <h5 class="team__mission__leader">Ислам Куаныш</h5>
+              <span class="team__mission__position">Директор</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="blog">
+        <div class="container">
+          <div class="row blog__row blog__row-1">
+            <div class="col-12 blog__title">
+              <h2 class="blog__title__main">Блог</h2>
+              <div class="title__line blog__title__line"></div>
+            </div>
+          </div>
+          <div class="blog__row blog__row-2">
+            <div class="blog__item">
+              <div class="blog__img"><img src="img/blog-1.jpg" alt="bedroom" class="img-fluid"></div>
+              <div class="blog__desc">
+                <p class="blog__desc__text"><a href="#" class="blog__desc__link">Минимализм – это самый простой, практичный и «спорный» стиль в дизайне интерьеров</a></p>
+              </div>
+            </div>
+            <div class="blog__item">
+              <div class="blog__img"><img src="img/blog-2.jpg" alt="kitchen" class="img-fluid"></div>
+              <div class="blog__desc">
+                <p class="blog__desc__text"><a href="#" class="blog__desc__link">Прованс - это спокойный южный регион Франции, с великолепнейшей природой</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="questions">
+        <div class="container">
+          <div class="row questions__row questions__row-1">
+            <div class="col-12 questions__title">
+              <h2 class="questions__title__main">Остались вопросы?</h2>
+              <div class="title__line questions__title__line"></div>
+              <h4 class="questions__title__add">Задайте их в форме ниже и наши специалисты свяжуться с Вами!</h4>
+            </div>
+          </div>
+          <div class="row questions__row questions__row-2">
+            <div class="col-md-8 questions__data">
+              <form action="/" class="questions__form" id="questions-form" name="questions-form" method="POST">
+                <div class="questions__form__inputwrapper">
+                  <input type="text" class="questions__form__input" value="" name="questions-form-name" id="questions-form-name" form="questions-form" placeholder="Ваше имя" maxlength="32" pattern="^[a-zA-ZА-Яа-яЁё\s\'-]+$" required>
+                  <input type="email" class="questions__form__input" value="" name="questions-form-email" id="questions-form-email" form="questions-form" placeholder="Ваш e-mail" maxlength="32" pattern="^[.a-zA-Zа-яА-Я0-9_-]+@[а-яА-Яa-z0-9-.]+\.[а-яА-Яa-zA-Z]{2,6}$" required>
+                  <input type="tel" class="questions__form__input questions__form__input-last" value="" name="questions-form-tel" id="questions-form-tel" form="questions-form" placeholder="Ваш номер телефона" maxlength="14" pattern="\+{0,1}[7|8]\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
+                </div>
+                <textarea class="questions__form__textarea" name="questions-form-message" id="questions-form-message" form="questions-form" maxlength="1000" placeholder="Ваше сообщение" required></textarea>
+                <button class="button questions__form__button" form="questions-form" type="submit">Оставить заявку!</button>
+              </form>
+            </div>
+            <div class="col-md-4 questions__contacts">
+              <div class="questions__contacts__icon">
+                <a href="tel:+78968766677">
+                  <svg class="questions__contacts__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="12" height="15" viewBox="0 0 12 15">
+                    <title>Phone</title>
+                    <path d="M11.786 10.379c0 0.301-0.134 0.887-0.259 1.164-0.176 0.41-0.645 0.678-1.021 0.887-0.494 0.268-0.996 0.427-1.557 0.427-0.778 0-1.482-0.318-2.193-0.578-0.511-0.184-1.004-0.41-1.465-0.695-1.423-0.879-3.139-2.595-4.018-4.018-0.285-0.46-0.511-0.954-0.695-1.465-0.259-0.711-0.578-1.415-0.578-2.193 0-0.561 0.159-1.063 0.427-1.557 0.209-0.377 0.477-0.845 0.887-1.021 0.276-0.126 0.862-0.259 1.164-0.259 0.059 0 0.117 0 0.176 0.025 0.176 0.059 0.36 0.469 0.444 0.636 0.268 0.477 0.527 0.963 0.804 1.431 0.134 0.218 0.385 0.485 0.385 0.745 0 0.511-1.515 1.256-1.515 1.708 0 0.226 0.209 0.519 0.326 0.72 0.845 1.523 1.9 2.578 3.424 3.424 0.201 0.117 0.494 0.326 0.72 0.326 0.452 0 1.197-1.515 1.708-1.515 0.259 0 0.527 0.251 0.745 0.385 0.469 0.276 0.954 0.536 1.431 0.804 0.167 0.084 0.578 0.268 0.636 0.444 0.025 0.059 0.025 0.117 0.025 0.176z"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="questions__contacts__desc"><a href="tel:+78968766677" class="questions__contacts__data">+ 7 896 876 66 77</a></div>
+              <div class="questions__contacts__icon">
+                <a href="https://api.whatsapp.com/send?phone=78968766677" target="_blank">
+                  <svg class="questions__contacts__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                    <title>Whatsapp</title>
+                    <path d="M12.788 2.18c-1.403-1.406-3.27-2.18-5.259-2.18-4.096 0-7.43 3.334-7.43 7.433 0 1.31 0.343 2.59 0.993 3.715l-1.055 3.853 3.94-1.034c1.087 0.592 2.309 0.905 3.551 0.905h0.003c0 0 0 0 0 0 4.096 0 7.433-3.334 7.433-7.433 0-1.986-0.773-3.853-2.177-5.259zM7.532 13.617v0c-1.11 0-2.197-0.299-3.146-0.861l-0.226-0.135-2.338 0.612 0.624-2.279-0.146-0.234c-0.621-0.981-0.946-2.118-0.946-3.287 0-3.407 2.771-6.179 6.182-6.179 1.649 0 3.202 0.645 4.368 1.811 1.166 1.169 1.808 2.719 1.808 4.371-0.003 3.41-2.774 6.182-6.179 6.182zM10.919 8.988c-0.185-0.094-1.099-0.542-1.269-0.604s-0.293-0.094-0.419 0.094c-0.123 0.185-0.48 0.604-0.589 0.729-0.108 0.123-0.217 0.141-0.401 0.047s-0.785-0.29-1.494-0.923c-0.551-0.492-0.926-1.102-1.034-1.286s-0.012-0.287 0.082-0.378c0.085-0.082 0.185-0.217 0.278-0.325s0.123-0.185 0.185-0.311c0.062-0.123 0.032-0.231-0.015-0.325s-0.419-1.008-0.571-1.38c-0.149-0.363-0.305-0.313-0.419-0.319-0.108-0.006-0.231-0.006-0.354-0.006s-0.325 0.047-0.495 0.231c-0.17 0.185-0.65 0.636-0.65 1.55s0.665 1.796 0.759 1.922c0.094 0.123 1.31 2.001 3.173 2.804 0.442 0.19 0.788 0.305 1.058 0.393 0.445 0.141 0.85 0.12 1.169 0.073 0.357-0.053 1.099-0.448 1.254-0.882s0.155-0.806 0.108-0.882c-0.044-0.082-0.167-0.129-0.354-0.223z"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="questions__contacts__desc"><a href="https://api.whatsapp.com/send?phone=78968766677" target="_blank" class="questions__contacts__data">+ 7 896 876 66 77</a></div>
+              <div class="questions__contacts__icon">
+                <a href="mailto:sales@23degree.kz">
+                  <svg class="questions__contacts__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                    <title>E-mail</title>
+                    <path d="M15 5.943v6.646c0 0.737-0.603 1.339-1.339 1.339h-12.321c-0.737 0-1.339-0.603-1.339-1.339v-6.646c0.251 0.276 0.536 0.519 0.845 0.728 1.39 0.946 2.796 1.892 4.16 2.888 0.703 0.519 1.574 1.155 2.486 1.155h0.017c0.912 0 1.783-0.636 2.486-1.155 1.364-0.988 2.771-1.942 4.169-2.888 0.301-0.209 0.586-0.452 0.837-0.728zM15 3.482c0 0.938-0.695 1.783-1.431 2.294-1.306 0.904-2.62 1.808-3.917 2.72-0.544 0.377-1.465 1.147-2.143 1.147h-0.017c-0.678 0-1.599-0.77-2.143-1.147-1.297-0.912-2.612-1.816-3.909-2.72-0.594-0.402-1.44-1.348-1.44-2.109 0-0.82 0.444-1.523 1.339-1.523h12.321c0.728 0 1.339 0.603 1.339 1.339z"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="questions__contacts__desc"><a href="mailto:sales@23degree.kz" class="questions__contacts__data">sales@23degree.kz</a></div>
+              <div class="questions__contacts__icon">
+                <a href="skype:23degree&chat">
+                  <svg class="questions__contacts__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                    <title>Skype</title>
+                    <path d="M6.234 0.548c-0.023-0.015-0.050-0.026-0.073-0.038-0.026 0.006-0.050 0.009-0.076 0.015l0.149 0.023z"></path>
+                    <path d="M0.539 6.167c-0.006 0.026-0.009 0.053-0.012 0.076 0.015 0.023 0.023 0.047 0.038 0.070l-0.026-0.146z"></path>
+                    <path d="M14.455 8.827c0.006-0.026 0.009-0.053 0.015-0.079-0.015-0.023-0.023-0.047-0.038-0.070l0.023 0.149z"></path>
+                    <path d="M8.672 14.399c0.023 0.015 0.050 0.026 0.073 0.038 0.026-0.006 0.053-0.009 0.079-0.012l-0.152-0.026z"></path>
+                    <path d="M14.47 8.748c-0.006 0.026-0.009 0.053-0.015 0.079l-0.026-0.152c0.015 0.026 0.026 0.050 0.041 0.073 0.076-0.422 0.117-0.853 0.117-1.283 0-0.955-0.188-1.884-0.557-2.757-0.357-0.844-0.867-1.603-1.518-2.253s-1.409-1.16-2.25-1.518c-0.873-0.369-1.802-0.557-2.757-0.557-0.451 0-0.902 0.041-1.342 0.126 0 0-0.003 0-0.003 0 0.023 0.012 0.050 0.023 0.073 0.038l-0.149-0.023c0.026-0.006 0.050-0.009 0.076-0.015-0.604-0.319-1.28-0.492-1.966-0.492-1.119 0-2.174 0.437-2.965 1.228s-1.228 1.846-1.228 2.965c0 0.712 0.185 1.415 0.527 2.033 0.006-0.026 0.009-0.053 0.012-0.076l0.026 0.149c-0.015-0.023-0.026-0.047-0.038-0.070-0.070 0.401-0.105 0.812-0.105 1.222 0 0.955 0.188 1.884 0.557 2.757 0.357 0.844 0.867 1.6 1.518 2.25s1.409 1.16 2.253 1.518c0.873 0.369 1.802 0.557 2.757 0.557 0.416 0 0.832-0.038 1.239-0.111-0.023-0.015-0.047-0.026-0.073-0.038l0.152 0.026c-0.026 0.006-0.053 0.009-0.079 0.012 0.627 0.354 1.339 0.545 2.063 0.545 1.119 0 2.174-0.437 2.965-1.228s1.228-1.846 1.228-2.965c-0.003-0.712-0.187-1.415-0.533-2.039zM7.532 11.804c-2.517 0-3.642-1.236-3.642-2.165 0-0.475 0.352-0.809 0.835-0.809 1.078 0 0.797 1.547 2.807 1.547 1.028 0 1.597-0.56 1.597-1.131 0-0.343-0.17-0.724-0.847-0.891l-2.238-0.56c-1.802-0.451-2.13-1.427-2.13-2.344 0-1.901 1.79-2.616 3.472-2.616 1.55 0 3.375 0.855 3.375 1.998 0 0.489-0.425 0.773-0.908 0.773-0.92 0-0.75-1.271-2.602-1.271-0.92 0-1.427 0.416-1.427 1.011s0.727 0.785 1.356 0.929l1.658 0.369c1.813 0.404 2.273 1.465 2.273 2.461 0 1.544-1.187 2.698-3.58 2.698z"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="questions__contacts__desc"><a href="skype:23degree&chat" class="questions__contacts__data">skype: 23degree</a></div>
+              <div class="questions__contacts__icon">
+                <a href="https://telegram.me/23degree" target="_blank">
+                  <svg class="questions__contacts__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                    <title>Telegram</title>
+                    <path d="M7.5 0c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5 7.5-3.357 7.5-7.5-3.357-7.5-7.5-7.5zM11.186 5.142l-1.23 5.798c-0.085 0.413-0.334 0.51-0.68 0.319l-1.875-1.386-0.899 0.876c-0.105 0.103-0.188 0.187-0.375 0.187-0.243 0-0.202-0.091-0.284-0.322l-0.639-2.098-1.854-0.577c-0.401-0.123-0.404-0.398 0.091-0.595l7.225-2.789c0.328-0.149 0.647 0.079 0.521 0.586z"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="questions__contacts__desc"><a href="https://telegram.me/23degree" target="_blank" class="questions__contacts__data">telegram: 23degree</a></div>
+              <div class="questions__contacts__shedule">
+                <p class="questions__contacts__timetable">График работы: с 9-00 до 18-00.<br>Пн.-Пт.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <div class="map__wrap">
+          <div class="map__overlay"></div>
+          <div class="map__body">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af8b90d8c5f9869b1973e2f5adf61dd292722bffb56b053a9df45b13e234228f4&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="row footer__row footer__row-1">
+          <div class="col-md-1 col-6 footer__navigation footer__navigation-1">
+            <a href="./index.html" class="footer__link footer__link-1">Главная</a>
+            <a href="#" class="footer__link footer__link-1">Тарифы</a>
+          </div>
+          <div class="col-md-2 col-6 footer__navigation footer__navigation-2">
+            <a href="#" class="footer__link footer__link-2">Вопросы-ответы</a>
+            <a href="#" class="footer__link footer__link-2">Личный кабинет</a>
+          </div>
+          <div class="col-md-4 col-6 footer__navigation footer__navigation-3">
+            <a href="#" class="footer__link footer__link-3">Новости</a>
+            <a href="#" class="footer__link footer__link-3">Договор публичной оферты</a>
+          </div>
+          <div class="col-md-5 col-6 footer__social">
+            <div class="footer__social__wrap">
+              <div class="footer__social__desc">
+                <p class="footer__social__text">Мы в социальных сетях:</p>
+              </div>
+              <div class="footer__social__icons">
+                <div class="footer__social__icons__item">
+                  <a href="https://www.facebook.com/talamdl">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                      <title>Facebook</title>
+                      <path d="M11.875 3.75h3.125v-3.75h-3.125c-2.412 0-4.375 1.963-4.375 4.375v1.875h-2.5v3.75h2.5v10h3.75v-10h3.125l0.625-3.75h-3.75v-1.875c0-0.339 0.286-0.625 0.625-0.625z"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="footer__social__icons__item">
+                  <a href="https://vk.com/vitya008">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                      <title>Google+</title>
+                      <path d="M1.989 5.589c0 1.494 0.499 2.572 1.482 3.205 0.806 0.52 1.74 0.598 2.226 0.598 0.118 0 0.213-0.006 0.279-0.010 0 0-0.154 1.004 0.59 1.996h-0.034c-1.289 0-5.493 0.269-5.493 3.727 0 3.516 3.861 3.695 4.636 3.695 0.061 0 0.097-0.002 0.097-0.002 0.008 0 0.063 0.002 0.158 0.002 0.497 0 1.782-0.062 2.975-0.643 1.548-0.75 2.333-2.059 2.333-3.885 0-1.764-1.196-2.814-2.069-3.582-0.533-0.469-0.994-0.873-0.994-1.266 0-0.4 0.337-0.701 0.762-1.082 0.689-0.615 1.339-1.492 1.339-3.15 0-1.457-0.189-2.436-1.354-3.057 0.121-0.062 0.551-0.107 0.763-0.137 0.631-0.086 1.554-0.184 1.554-0.699v-0.099h-4.599c-0.046 0.002-4.651 0.172-4.651 4.389zM9.413 14.602c0.088 1.406-1.115 2.443-2.922 2.574-1.835 0.135-3.345-0.691-3.433-2.096-0.043-0.676 0.254-1.336 0.835-1.863 0.589-0.533 1.398-0.863 2.278-0.928 0.104-0.006 0.207-0.012 0.31-0.012 1.699 0.001 2.849 0.999 2.932 2.325zM8.212 4.626c0.451 1.588-0.23 3.246-1.316 3.553-0.125 0.035-0.253 0.052-0.384 0.052-0.994 0-1.979-1.006-2.345-2.393-0.204-0.776-0.187-1.458 0.047-2.112 0.229-0.645 0.643-1.078 1.163-1.225 0.125-0.035 0.254-0.053 0.385-0.053 1.2 0 1.972 0.498 2.45 2.178zM16 8v-3h-2v3h-3v2h3v3h2v-3h3v-2h-3z"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="footer__social__icons__item">
+                  <a href="https://www.instagram.com/sprutnutscrab/">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                      <title>Instagram</title>
+                      <path d="M17 1h-14c-1.1 0-2 0.9-2 2v14c0 1.101 0.9 2 2 2h14c1.1 0 2-0.899 2-2v-14c0-1.1-0.9-2-2-2zM9.984 15.523c3.059 0 5.538-2.481 5.538-5.539 0-0.338-0.043-0.664-0.103-0.984h1.581v7.216c0 0.382-0.31 0.69-0.693 0.69h-12.614c-0.383 0-0.693-0.308-0.693-0.69v-7.216h1.549c-0.061 0.32-0.104 0.646-0.104 0.984 0 3.059 2.481 5.539 5.539 5.539zM6.523 9.984c0-1.912 1.55-3.461 3.462-3.461s3.462 1.549 3.462 3.461-1.551 3.462-3.462 3.462c-1.913 0-3.462-1.55-3.462-3.462zM16.307 6h-1.615c-0.382 0-0.692-0.312-0.692-0.692v-1.617c0-0.382 0.31-0.691 0.691-0.691h1.615c0.384 0 0.694 0.309 0.694 0.691v1.616c0 0.381-0.31 0.693-0.693 0.693z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row footer__row footer__row-2">
+          <div class="col-sm-6 col-12 footer__copyright">
+            <p class="footer__copyright__text">© Kazteleport, 2015. Все права защищены</p>
+          </div>
+          <div class="col-sm-6 footer__creator">
+            <div class="footer__creator__wrap">
+              <p class="footer__creator__text">Создание сайта - </p>
+              <a href="#"><img src="img/logo-creator.png" alt="genesis"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery-->
+<script src="./libs/jquery-ui.min.js"></script> <!--JQueryUI Library-->
+<link rel="stylesheet" href="./libs/jquery-ui.css"> <!--JQuery UI Styles for Input Range-->
+<script src="./libs/jquery.ui.touch-punch.min.js"></script> <!--JQueryUI for Touchpads-->
+<script src="./libs/jquery.jscrollpane.min.js"></script> <!--jScrollPane Plugin for custom scroll-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script> <!--Popper JS-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> <!-- Bootstrap functionality-->
+<script src="./js/main.js"></script>
+<script src="./js/main-jq.js"></script>
+</body>
+</html>
